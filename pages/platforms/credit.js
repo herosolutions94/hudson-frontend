@@ -56,7 +56,7 @@ export default function Credit({ result }) {
                         <ul>
                           {
                             program?.rows?.length > 0 ?
-                              program?.rows?.slice(0, 5)?.map((program_row) => {
+                              program?.rows?.slice(0, 4)?.map((program_row) => {
                                 return (
                                   <li key={index}>
                                     <p>{program_row?.title}</p>
