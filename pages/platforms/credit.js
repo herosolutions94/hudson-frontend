@@ -58,7 +58,7 @@ export default function Credit({ result }) {
                             program?.rows?.length > 0 ?
                               program?.rows?.slice(0, 4)?.map((program_row) => {
                                 return (
-                                  <li key={index}>
+                                  <li key={program_row?.id}>
                                     <p>{program_row?.title}</p>
                                     <h5>{program_row?.detail}</h5>
                                   </li>
@@ -150,9 +150,9 @@ export default function Credit({ result }) {
               <ul>
                 {
                   popup?.rows?.length > 0 ?
-                    popup?.rows?.slice(0, 5)?.map((popup_row) => {
+                    popup?.rows?.map((popup_row) => {
                       return (
-                        <li key={index}>
+                        <li key={popup_row?.id}>
                           <p>{popup_row?.title}</p>
                           <h5>{popup_row?.detail}</h5>
                         </li>
