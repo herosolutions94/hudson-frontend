@@ -71,7 +71,7 @@ export default function Credit({ result }) {
 
                         </ul>
                         {
-                          program?.rows?.length > 5 ?
+                          program?.rows?.length > 4 ?
                             <div className="btn_blk text-center">
                               <button type="button" className="site_btn" onClick={() => setPopup(program)}>{program?.button_text}</button>
                             </div>
