@@ -52,20 +52,64 @@ const MapMarkersContain = ({ portfolio }) => {
                 // Create a popup for the marker
                 const popup = new mapboxgl.Popup({ offset: 25 })
                     .setHTML(`
-                        <div className="item">
-            <div className="inner">
-                <a href=${"/portfolio/" + item?.slug} ></a>
-                <div className="image">
-                    <Image src=${cmsFileUrl(item?.image, 'portfolio')} width={1000} height={1000} alt=${item?.title} />
-                    <span className="label_type capitalize">${item?.platform}</span>
+                        <div className="item custom_pointer">
+            <div className="inner" style="position:relative;">
+                <a href=${"/portfolio/" + item?.slug} style="position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;"></a>
+                <div className="image" 
+                style="width: 100%;
+                position: relative;
+                background: #fff;
+                padding: 0;
+                padding-bottom: 50%;
+                overflow: hidden;
+                box-shadow: none;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;"
+                >
+                    <Image src=${cmsFileUrl(item?.image, 'portfolio')} width={1000} height={1000} alt=${item?.title} style="display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transition: all ease 0.5s;"/>
+                    <span className="label_type capitalize" style="position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    z-index: 1;
+                    background-color: #E6EDF3;
+                    color: #000;
+                    padding: 0.3rem 1rem;
+                    font-size: 1.3rem;
+                    border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;text-transform: capitalize;">${item?.platform}</span>
                 </div>
-                <div className="inner_cntnt">
+                <div className="inner_cntnt" style="padding: 1rem;">
                     <h5>${item?.title}</h5>
-                    <div className="location">
-                        <Image src="/images/map.svg" width={100} height={100} alt="" />
-                        <span>${item?.address}</span>
+                    <div className="location" style="display: flex;
+                    -webkit-box-orient: vertical;
+                    gap: 0.7rem;
+                    margin-bottom: 1rem;">
+                        <Image src="/images/map.svg" width={100} height={100} alt="" style="width: 1.8rem;
+                        height: 1.8rem;
+                        align-self: center;"/>
+                        <span style="flex: 1 1;">${item?.address}</span>
                     </div>
-                    <p>${item?.short_text}</p>
+                    <p style="margin-bottom: 0;">${item?.short_text}</p>
                 </div>
             </div>
         </div>

@@ -1557,6 +1557,9 @@
   background-position: bottom;
   padding-top: 20rem;
   padding-bottom: 3rem;
+  &.bg_none_none{
+    background: none;
+  }
   @include mobile {
     padding-top: 13rem;
   }
@@ -2090,4 +2093,23 @@ p.error {
 }
 .capitalize{
   text-transform: capitalize;
+}
+
+
+.mapboxgl-popup-close-button {
+  background-color: #000000!important;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem!important;
+  top: 1.5rem!important;
+  color: #fff!important;
+  font-size: 2rem!important;
+  border-radius: 50px!important;
+  width: 3rem!important;
+  height: 3rem!important;
+}
+.mapboxgl-popup{
+  max-width: 200px!important;
 }
