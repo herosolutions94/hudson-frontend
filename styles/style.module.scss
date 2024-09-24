@@ -242,7 +242,78 @@
     }
   }
 }
+.mapboxgl-popup-content{
+  .item {
+    padding: 1rem;
+    width: calc(100% / 3);
+    @include ipad_sm {
+      width: 50%;
+    }
+    @include mobile_sm {
+      width: 100%;
+    }
+    .inner {
+      @include radius(10px);
+      overflow: hidden;
+      background-color: rgba($color, 0.2);
+      position: relative;
 
+      > a {
+        @include pos;
+        z-index: 1;
+      }
+      .image {
+        width: 100%;
+        @include img(70%);
+        box-shadow: none;
+        @include radius(0);
+
+        img {
+          @include object;
+          @include pos;
+          @include trans;
+        }
+        .label_type {
+          @include pos($r: null, $b: null, $t: 2rem, $l: 2rem);
+          z-index: 1;
+          background-color: $color2;
+          color: $black;
+          padding: 0.3rem 1rem;
+          font-size: 1.3rem;
+          @include radius(4px);
+        }
+      }
+      @include trans;
+      &:hover {
+        .image {
+          img {
+            @include trans;
+            transform: scale(1.5);
+          }
+        }
+      }
+      .inner_cntnt {
+        padding: 2rem;
+        .location {
+          @include flex;
+          gap: 0.7rem;
+          margin-bottom: 1rem;
+          img {
+            width: 1.8rem;
+            height: 1.8rem;
+            align-self: center;
+          }
+          span {
+            flex: 1;
+          }
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
 .transaction_slider {
   margin: -1rem;
   .item {

@@ -44,7 +44,7 @@ export default function Portfolio({ result }) {
           <div className="top_header_heading cntnt text-center">
             <Text string={content?.banner_detail} />
           </div>
-          <MapMarkersContain markers={markers} />
+          <MapMarkersContain markers={markers} portfolio={portfolio} />
           <div className="contain">
 
             <PlatformFilter locations={locations} />

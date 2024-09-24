@@ -37,14 +37,14 @@ export default function PlatformFilter({ locations }) {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="filter_portfolio">
-          <div className="blk_filter">
+          {/* <div className="blk_filter">
             <h6>Property Type</h6>
             <select className="input" {...register("property_type")}>
               <option value="multifamily">Multifamily</option>
               <option value="mixed-use">Mixed-Use</option>
               <option value="commercial">Commercial</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="blk_filter">
             <h6>Platform</h6>
