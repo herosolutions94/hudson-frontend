@@ -26,7 +26,7 @@ export default function Acquisition({ result }) {
       <MetaGenerator page_title={page_title} meta_info={meta_desc} site_settings={site_settings} />
       <main>
 
-        <section className="cmn_banner bg_none_none">
+        <section className="cmn_banner" style={{ backgroundImage: "url(" + cmsFileUrl(content?.image1, 'images') + ")" }}>
           <div className="contain">
             <div className="outer">
               <div className="cntnt">
@@ -44,11 +44,11 @@ export default function Acquisition({ result }) {
                 </div>
                 <Text string={content?.section1_text} />
               </div>
-              <div className="colR">
+              {/* <div className="colR">
                 <div className="image">
                   <Image src={cmsFileUrl(content?.image2, 'images')} width={1000} height={1000} alt={short_text(content?.section1_text)} />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

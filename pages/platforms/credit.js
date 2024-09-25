@@ -31,7 +31,7 @@ export default function Credit({ result }) {
     <>
       <MetaGenerator page_title={page_title} meta_info={meta_desc} site_settings={site_settings} />
       <main>
-        <section className="cmn_banner bg_none_none">
+        <section className="cmn_banner" style={{ backgroundImage: "url(" + cmsFileUrl(content?.image1, 'images') + ")" }}>
           <div className="contain">
             <div className="outer">
               <div className="cntnt">
