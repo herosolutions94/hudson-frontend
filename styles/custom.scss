@@ -215,9 +215,9 @@ h4 {
   @include pos($r: 16px, $l: null, $z: 4, $t: -0.7px);
   // width: 2rem;
   // height: 1.6rem;
-  width: 1.6rem;
+  width: 2.5rem;
   display: none;
-  height: 1.5rem;
+  height: 2rem;
   background: transparent;
   padding: 0;
   margin: auto;
@@ -237,7 +237,7 @@ h4 {
     position: absolute;
     width: inherit;
     height: 0.2rem;
-    width: 14px;
+    width: 20px;
     border-radius: 10px;
     background: $light;
     @include trans;
@@ -249,7 +249,7 @@ h4 {
   &::before {
     content: "";
     top: 0;
-    width: 16px;
+    width: 25px;
     @at-root .active#{&} {
       top: 50%;
       margin-top: -0.1rem;
@@ -261,7 +261,7 @@ h4 {
   &::after {
     content: "";
     bottom: -1px;
-    width: 16px;
+    width: 25px;
     @at-root .active#{&} {
       bottom: 50%;
       margin-bottom: -0.1rem;
