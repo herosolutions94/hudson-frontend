@@ -34,7 +34,7 @@ export default function Advisory({ result }) {
           </div>
         </section>
 
-        <section className="thesis_sec platform_thesis_sec p_t_5">
+        <section className="thesis_sec platform_thesis_sec p_t_5 advisory_sec">
           <div className="contain">
             <div className="flex reverse_flex_flex">
 

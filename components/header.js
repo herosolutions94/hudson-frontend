@@ -48,8 +48,20 @@ export default function Header({ siteSettings }) {
             </li>
             <li><Link href="/portfolio" onClick={ToggleAction}>Portfolio</Link></li>
             <li className="drop">
-              <Link href="/platforms" onClick={ToggleAction}>Our Platforms</Link>
-              <ul className="sub">
+              <Link href="/platforms" onClick={ToggleAction} className="hide_on_mobile">Our Platforms</Link>
+              <a href="#!" onClick={ToggleUserDrop} className="hide_on_desktop">Our Platforms</a>
+              <ul className={userDrop ? "sub hide_on_desktop show" : "sub hide_on_desktop"}>
+                <li>
+                  <Link href="/platforms/acquisition" onClick={ToggleAction}>HudsonPoint Acquisitions</Link>
+                </li>
+                <li>
+                  <Link href="/platforms/credit" onClick={ToggleAction}>HudsonPoint Credit</Link>
+                </li>
+                <li>
+                  <Link href="/platforms/advisory" onClick={ToggleAction}>HudsonPoint Advisory</Link>
+                </li>
+              </ul>
+              <ul className="sub hide_on_mobile">
                 <li>
                   <Link href="/platforms/acquisition" onClick={ToggleAction}>HudsonPoint Acquisitions</Link>
                 </li>

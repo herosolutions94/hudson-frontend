@@ -424,6 +424,11 @@
       margin-top: 3rem;
     }
   }
+  &.acquisition_sec{
+    .colL{
+      width: 100%;
+    }
+  }
 }
 
 // .statics_sec{
@@ -1405,7 +1410,7 @@
           h4 {
             text-transform: uppercase;
             color: $color;
-            font-family: "Medium";
+            font-family: "SemiBold";
             font-size: 2rem;
           }
         }
@@ -1484,6 +1489,11 @@
           opacity: 0.9;
         }
       }
+    }
+  }
+  &.advisory_sec{
+    .colL{
+      width: 100%;
     }
   }
 }

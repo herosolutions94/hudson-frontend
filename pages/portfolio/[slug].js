@@ -59,7 +59,7 @@ export default function PortfolioDetail({ result }) {
                 <div className="flex">
                   <div className="col">
                     <div className="inner">
-                      <h4>acquisition date</h4>
+                      <h4>transaction date</h4>
                       <p>{portfolio?.acquisition_date}</p>
                     </div>
                   </div>

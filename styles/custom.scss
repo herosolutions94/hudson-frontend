@@ -5884,5 +5884,39 @@ table {
     }
   }
 }
-
+#nav > ul > li.drop > a.hide_on_mobile{
+  @include ipad{
+    display: none
+  }
+}
+#nav > ul > li.drop > a.hide_on_desktop{
+  display: none;
+  @include ipad{
+    display: flex;
+    &:after {
+      display: flex;
+    }
+  }
+}
+#nav > ul > li > .sub{
+  @include ipad{
+    &.hide_on_mobile{
+      display: none
+    }
+  }
+  &.hide_on_desktop{
+    display: none;
+    @include ipad{
+      display: block;
+      visibility: hidden;
+    opacity: 0;
+    position:absolute;
+    &.show{
+      visibility: visible;
+      opacity: 1;
+      position: static
+    }
+    }
+  }
+}
 @import "style.module";

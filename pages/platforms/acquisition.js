@@ -35,7 +35,7 @@ export default function Acquisition({ result }) {
             </div>
           </div>
         </section>
-        <section className="about_sec">
+        <section className="about_sec acquisition_sec">
           <div className="contain">
             <div className="flex">
               <div className="colL">
