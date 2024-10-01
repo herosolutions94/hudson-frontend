@@ -51,7 +51,7 @@ export default function PlatformFilter({ locations }) {
             <select className="input" {...register("platform")}>
               <option value="acquisition">HudsonPoint Acquisitions</option>
               <option value="credit">HudsonPoint Credit</option>
-              <option value="advisory">HudsonPoint Advisory</option>
+              <option value="all">All Transactions</option>
             </select>
           </div>
 

@@ -12,6 +12,11 @@ export default function Header({ siteSettings }) {
     setUserDrop(!userDrop);
   }
 
+  const [companyDrop, setCompanyDrop] = useState(false);
+  const ToggleCompanyDrop = () => {
+    setCompanyDrop(!companyDrop);
+  }
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,8 +45,13 @@ export default function Header({ siteSettings }) {
         <nav id="nav" className={toggle ? "active" : ""}>
           <ul>
             <li className="drop">
-              <Link href="/company" onClick={ToggleAction}>Company</Link>
-              <ul className="sub">
+              <Link href="/company" onClick={ToggleAction} className="hide_on_mobile">Company</Link>
+              <a href="#!" onClick={ToggleCompanyDrop} className="hide_on_desktop">Company</a>
+              <ul className={companyDrop ? "sub hide_on_desktop show" : "sub hide_on_desktop"}>
+                <li><Link href="/company" onClick={ToggleAction}>About Us</Link></li>
+                <li><Link href="/company#team" onClick={ToggleAction}>Team</Link></li>
+              </ul>
+              <ul className="sub hide_on_mobile">
                 <li><Link href="/company" onClick={ToggleAction}>About Us</Link></li>
                 <li><Link href="/company#team" onClick={ToggleAction}>Team</Link></li>
               </ul>
