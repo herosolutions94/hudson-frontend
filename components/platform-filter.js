@@ -49,15 +49,17 @@ export default function PlatformFilter({ locations }) {
           <div className="blk_filter">
             <h6>Platform</h6>
             <select className="input" {...register("platform")}>
+              <option value="all">All Transactions</option>
               <option value="acquisition">HudsonPoint Acquisitions</option>
               <option value="credit">HudsonPoint Credit</option>
-              <option value="all">All Transactions</option>
+
             </select>
           </div>
 
           <div className="blk_filter">
             <h6>Location</h6>
             <select className="input" {...register("location")}>
+              <option value="all">All Locations</option>
               {locations?.map((location, index) => (
                 <option value={location?.id} key={index}>
                   {location?.name}
