@@ -2,7 +2,7 @@
 const webpack = require("webpack");
 const nextConfig = {
   images: {
-    domains: ['localhost','herosolutions.com.pk','hudsonpointgroup.com'],
+    domains: ['localhost','herosolutions.com.pk','api.hudsonpointgroup.com'],
   },
   reactStrictMode: true,
 
