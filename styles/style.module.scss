@@ -1404,6 +1404,10 @@
           padding: 2rem;
           text-align: center;
           @include radius(5px);
+          @include mobile_sm{
+            padding: 1rem;
+            height: 100%;
+          }
           p {
             margin-bottom: 0;
           }
@@ -1412,6 +1416,9 @@
             color: $color;
             font-family: "SemiBold";
             font-size: 2rem;
+            @include mobile_sm{
+              font-size: 1.6rem;
+            }
           }
         }
       }
