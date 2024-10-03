@@ -26,6 +26,7 @@ export default function About({ result }) {
   }
 
   const investment_thesis = generateContentArray(content, 3, 6, 2, '_card');
+  console.log(meta_desc)
   return (
     <>
       <MetaGenerator page_title={page_title} meta_info={meta_desc} site_settings={site_settings} />

@@ -49,8 +49,8 @@ export default function MetaGenerator({
           <meta
             property="og:image"
             content={
-              meta_thumb
-                ? meta_thumb
+              meta_info?.og_image
+                ? cmsFileUrl(meta_info?.og_image, 'images')
                 : cmsFileUrl(site_settings?.site_thumb, 'images')
             }
           />
@@ -65,8 +65,8 @@ export default function MetaGenerator({
           <meta
             property="twitter:image"
             content={
-              meta_thumb
-                ? meta_thumb
+              meta_info?.og_image
+                ? cmsFileUrl(meta_info?.og_image, 'images')
                 : cmsFileUrl(site_settings?.site_thumb, 'images')
             }
           />
